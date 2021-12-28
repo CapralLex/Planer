@@ -61,12 +61,15 @@ let csrftoken = getCookie('csrftoken');
         container.append(todoItemForm.form);
         container.append(todoList);
 
-        let url = 'http://127.0.0.1:8000/api/task-list/'
+        // Да да, это ужасно, я знаю
+        //let url = 'http://127.0.0.1:8000/api/task-list/'
+        let url = 'https://ystu-planer.herokuapp.com/api/task-list/' // hardcode
+
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data){
 
-                console.log('Data: ', data)
+                /*console.log('Data: ', data)*/
 
                 let list = data
                 for (let i in list) {
@@ -98,8 +101,9 @@ let csrftoken = getCookie('csrftoken');
         }
 
         function deleteItem(item) {
-            console.log("Deleted: ", item)
-            fetch(`http://127.0.0.1:8000/api/task-delete/${item.id}/`, {
+            /*console.log("Deleted: ", item)*/
+            // hardcode
+            fetch(`https://ystu-planer.herokuapp.com/api/task-delete/${item.id}/`, {
 				method:'DELETE',
 				headers:{
 					'Content-type':'application/json',
@@ -109,9 +113,10 @@ let csrftoken = getCookie('csrftoken');
         }
 
         function completeTask(item) {
-            console.log("Completed: ", item.id)
+            /*console.log("Completed: ", item.id)*/
             item.is_complete = !item.is_complete
-            fetch(`http://127.0.0.1:8000/api/task-update/${item.id}/`, {
+            // hardcode
+            fetch(`https://ystu-planer.herokuapp.com/api/task-update/${item.id}/`, {
 				method:'POST',
 				headers:{
 					'Content-type':'application/json',
@@ -130,7 +135,7 @@ let csrftoken = getCookie('csrftoken');
 
             makeNewTask({'text': todoItemForm.input.value, 'is_complete': 0})
 
-            let url = 'http://127.0.0.1:8000/api/task-create/'
+            let url = 'https://ystu-planer.herokuapp.com/api/task-create/' // hardcode
             fetch(url, {
                 method: 'POST',
                 headers: {
