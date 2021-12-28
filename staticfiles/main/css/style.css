@@ -1,0 +1,50 @@
+.body_1 {
+   width: 1200px;
+    margin: auto;
+}
+#my-todos{
+    margin-top: 30px;
+}
+header{
+    width: 100%;
+    height: 68px;
+    background: #363E42;
+}
+.header_block{
+    color: #FFFFFF;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 16px;
+}
+.login_window
+{
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.login_button{
+    width: 200px;
+    height: 40px;
+    background: #363E42;
+    border: #363E42;
+    border-radius: 10px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+#reg_link{
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;
+}
+h1{
+    margin: auto;
+    width: max-content;
+    margin-top: 17px;
+}
