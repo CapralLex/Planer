@@ -18,7 +18,7 @@ def api_overview(request):
         'List': '/task-list/',
         'Create': '/task-create/',
         'Delete': '/task-delete/<str:pk>/',
-        'Update': 'task_update/<str:pk>/'
+        'Update': 'task-update/<str:pk>/'
     }
     return Response(api_urls)
 

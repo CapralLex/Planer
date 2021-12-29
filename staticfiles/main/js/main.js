@@ -169,8 +169,10 @@ let csrftoken = getCookie('csrftoken');
         buttonGroup.classList.add('btn-group', 'btn-group-sm');
         doneButton.classList.add('btn', 'btn-sucess');
         doneButton.textContent = 'Готово';
+        doneButton.style.width = "100px";
         deleteButton.classList.add('btn', 'btn-danger');
         deleteButton.textContent = 'Удалить';
+        deleteButton.style.width = "100px";
 
         buttonGroup.append(doneButton);
         buttonGroup.append(deleteButton);
